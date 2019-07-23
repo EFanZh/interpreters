@@ -17,7 +17,7 @@
        (let ([v (lookup x env)])
          (cond
           [(not v)
-           (error "undefined variable" x)]
+           x]
           [else v]))]
       [(? number? x) x]
       [`(lambda (,x) ,e)
